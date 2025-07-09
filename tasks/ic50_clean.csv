@@ -1,4 +1,4 @@
-Molecule ChEMBL ID,Smiles,Standard Relation,Standard Value (nM)
+Molecule ChEMBL ID,Smiles,Standard Relation,Standard Value
 CHEMBL70104,CC1(C)OC(=O)C(OC2CCCCC2)=C1c1ccc(S(C)(=O)=O)cc1,'=',40.0
 CHEMBL96098,CCc1ccc(-c2ncc(Cl)cc2-c2ccc(S(C)(=O)=O)cc2)cn1,'=',1700.0
 CHEMBL97179,CCCCOC(=O)Cc1c(C)n(C(=O)c2ccc(Cl)cc2)c2ccc(OC)cc12,'=',50.0
