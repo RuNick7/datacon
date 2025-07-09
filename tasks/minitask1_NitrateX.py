@@ -60,7 +60,6 @@ def _unit_factor(unit: str | float | None) -> float | None:
         return None
     return UNIT_FACTOR.get(unit.strip().replace(" ", "").lower())
 
-
 def _valid_smiles(smi) -> bool:
     if not isinstance(smi, str) or not smi:
         return False
@@ -105,7 +104,6 @@ def clean_file(src: Path, dst: Path) -> None:
 
     df_out.to_csv(dst, index=False, encoding="utf-8")
     logger.info("Saved %d clean rows → %s", len(df_out), dst)
-
 
 if __name__ == "__main__":
     argv = sys.argv[1:]
