@@ -44,3 +44,4 @@ df_final[["Maccs", "ECFP"]] = df_final["Smiles"].progress_apply(calc_fps)
 df_final.to_csv(DST_CSV, index=False)
 print(f"Done → {DST_CSV}  ({len(desc_names)} descriptors)")
 print(len(df_final.columns))
+#ale
