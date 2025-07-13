@@ -1,4 +1,20 @@
+# from DB_Manager import Manager
+# и используете по названиям функций
+# valid_smiles - принимает csv распакованый через pandas, возвращает csv с только валидными smiles
+# calc_all_desc - принимает csv распакованый через pandas, возвращает csv с добавленными дескрипторами
+# calc_fps - принимает csv распакованый через pandas, возвращает csv с добавленными фингерпринтами
+# merge(in, out) - принимает пть к папке, где лежат csv, всех их объединяет и потом сохраняет в файл out в той же папке
 class Manager:
+    @staticmethod
+    def valid_smiles(df):
+        from rdkit import Chem
+        def is_valid_smiles(smiles):
+            try:
+                return Chem.MolFromSmiles(smiles) is not None
+            except:
+                return False
+        # Фильтрация
+        return df[df['SMILES'].apply(is_valid_smiles)].copy()
     @staticmethod
     def calc_desc(df):
         import pandas as pd
