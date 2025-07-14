@@ -32,7 +32,7 @@ warnings.filterwarnings('ignore')
 
 """## Загрузка и первичный анализ данных"""
 
-DATA_PATH = Path('DataSet_with_2D.csv')
+DATA_PATH = Path('../../../AI/Task 4/DataSet_with_2D.csv')
 assert DATA_PATH.exists(), f'Файл {DATA_PATH} не найден. Поместите CSV рядом с ноутбуком.'
 
 df = pd.read_csv(DATA_PATH)
